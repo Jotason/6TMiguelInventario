@@ -31,7 +31,8 @@ public class InventoryUIHandler : MonoBehaviour
             GameObject instantiateButton = Instantiate(prefabItemButtom, scrollItems.content);
 
             instantiateButton.transform.Find("Icon").GetComponent<Image>().sprite = itemData.Icon;
-            instantiateButton.transform.Find("Icon/Amount").GetComponent<TMP_Text>().text = itemData.ItemName;
+            instantiateButton.transform.Find("Icon/Amount").GetComponent<TextMeshProUGUI>().text = item.Value.ToString();
+            //instantiateButton.transform.Find("Icon/Amount").GetComponent<TMP_Text>().text = itemData.Id.ToString();
         }
 
     }
