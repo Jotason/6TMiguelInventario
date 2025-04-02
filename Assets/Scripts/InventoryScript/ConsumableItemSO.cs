@@ -8,7 +8,7 @@ public enum CounsumableItemTypeEnum
     Poison
 }
 
-[CreateAssetMenu(fileName = "Consumable Item SO", menuName = "New Consumable Item SO")]
+[CreateAssetMenu(fileName = "Consumable Item SO", menuName = "Item Data/Items/New Consumable Item SO")]
 
 public class ConsumableItemSO : ItemDataSO
 {

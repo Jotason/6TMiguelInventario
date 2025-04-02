@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ItemDataSO : ScriptableObject
 {
+
+    [Header("Item data")]
     [SerializeField] int _id;
 
     [SerializeField] string _itemName;

@@ -743,6 +743,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123442751}
   m_CullTransparentMesh: 1
+--- !u!1 &1277604358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1277604360}
+  - component: {fileID: 1277604359}
+  m_Layer: 0
+  m_Name: Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1277604359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277604358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e81dc0e2e157e58409d14cd0e96395e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1277604360
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277604358}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1124.657, y: 655.4704, z: -5.8252163}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1489555301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,8 +1070,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 495, y: -540}
-  m_SizeDelta: {x: 590.25, y: 516.5}
+  m_AnchoredPosition: {x: 495, y: -580.7064}
+  m_SizeDelta: {x: 590.25, y: 793.3041}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1700090919
 MonoBehaviour:
@@ -1186,8 +1230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698d7a04ce92e0246b0989a4587c9ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
-  itemDataBase: {fileID: 0}
+  inventory: {fileID: 1277604359}
+  itemDataBase: {fileID: 11400000, guid: 70e90015605b3524c84772de8908bba3, type: 2}
   scrollItems: {fileID: 1700090919}
   prefabItemButtom: {fileID: 345085951203238340, guid: bebcec68be1d4384cb760f81be90e693, type: 3}
 --- !u!1660057539 &9223372036854775807
@@ -1198,3 +1242,4 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1662207371}
   - {fileID: 1541133867}
+  - {fileID: 1277604360}

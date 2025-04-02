@@ -5,7 +5,11 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
 
-    Dictionary<int, int> _items = new();
+    Dictionary<int, int> _items = new() {
+        {8 , 50 },
+        {2 , 15 },
+        {0 , 1 }
+    };
 
     public Dictionary<int, int> Items { get => _items; set => _items = value; }
 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c4ef8a428089b4e84b2c8cceace094, type: 3}
   m_Name: Pants
   m_EditorClassIdentifier: 
-  _id: 0
+  _id: 3
   _itemName: Pants
   _icon: {fileID: 21300000, guid: 97ca63c5954a8464bad12dcd40673bba, type: 3}
   _prefab: {fileID: 0}

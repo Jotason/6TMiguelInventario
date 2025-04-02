@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c4ef8a428089b4e84b2c8cceace094, type: 3}
   m_Name: Tibial
   m_EditorClassIdentifier: 
-  _id: 0
+  _id: 4
   _itemName: Tibial
   _icon: {fileID: 21300000, guid: a9842c0847b39ce4abb98b3c927c82e0, type: 3}
   _prefab: {fileID: 0}
