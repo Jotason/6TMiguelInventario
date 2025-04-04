@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -7,11 +8,17 @@ public class Inventory : MonoBehaviour
 
     Dictionary<int, int> _items = new() {
         {8 , 50 },
-        {2 , 15 },
-        {0 , 1 }
+        {2 , 15 }
+        //{0 , 1 }
     };
 
     public Dictionary<int, int> Items { get => _items; set => _items = value; }
+
+
+    private void Start()
+    {
+        ShowInventory();
+    }
 
     private void Update()
     {
@@ -21,12 +28,12 @@ public class Inventory : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            SaveItem(1, 1);
+            RemoveItem(2, 5);
         }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SaveItem(2, 1);
-        }
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    SaveItem(2, 1);
+        //}
     }
 
     public void SaveItem(int id, int amount)
@@ -48,6 +55,20 @@ public class Inventory : MonoBehaviour
         {
             Debug.Log("Cantidad " + item.Key + " Cantidad" + item.Value);
         }
+    }
+
+    public void RemoveItem(int id, int amount)
+    {
+        if (_items.ContainsKey(id))
+        {
+            _items[id] -= amount;
+            if (_items[id] <= 0)
+            {
+                _items.Remove(id);
+            }
+        }
+
+        ShowInventory();
     }
 
 }
