@@ -71,4 +71,6 @@ public class Inventory : MonoBehaviour
         ShowInventory();
     }
 
+    
+
 }
