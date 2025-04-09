@@ -16,5 +16,6 @@ MonoBehaviour:
   _itemName: Dagger
   _icon: {fileID: 21300000, guid: 798b2c2b968af2e47b2012863c12bc8a, type: 3}
   _prefab: {fileID: 0}
+  _itemtype: 2
   _damage: 4
   _weaponType: 1

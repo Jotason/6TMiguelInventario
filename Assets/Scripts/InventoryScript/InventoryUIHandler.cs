@@ -22,6 +22,9 @@ public class InventoryUIHandler : MonoBehaviour
     int itemSelectedId;
     List<GameObject> instantiateButtons = new();
 
+    [SerializeField] CanvasGroup previewPanel;
+
+
     private void Start()
     {
         SetInventory(inventory);
@@ -35,8 +38,13 @@ public class InventoryUIHandler : MonoBehaviour
         if (inventory != null)
         {
             inventory.ItemAdded -= ShowItems;
+
             inventory.ItemRemoved -= ShowItems;
+            inventory.ItemRemoved -= HidePreviewPanel;
+
             inventory.ItemUpdated -= ShowItems;
+            inventory.ItemUpdated -= UpdateAmountPreview;
+
         }
         //CAMBIO EL INVENTARIO 
         inventory = newInventory;
@@ -44,8 +52,15 @@ public class InventoryUIHandler : MonoBehaviour
 
         // ME SUSCRIBO A LOS EVENTOS DEL NUEVO INVENTARIO
         inventory.ItemAdded += ShowItems;
+
         inventory.ItemRemoved += ShowItems;
+        inventory.ItemRemoved += HidePreviewPanel;
+
         inventory.ItemUpdated += ShowItems;
+        inventory.ItemUpdated += UpdateAmountPreview;
+
+
+
     }
 
     public void InstantiateButtons()
@@ -81,6 +96,7 @@ public class InventoryUIHandler : MonoBehaviour
 
             searchedButton.GetComponent<Button>().onClick.AddListener(delegate
              {
+                 ShowPreviewPanel();
                  ShowItemPreview(itemData, item.Value);
              }
             );
@@ -102,5 +118,26 @@ public class InventoryUIHandler : MonoBehaviour
     {
         inventory.RemoveItem(itemSelectedId, 1);
         //ShowItems();
+    }
+
+    private void UpdateAmountPreview()
+    {
+
+        itemAmountPreviewText.text = inventory.Items[itemSelectedId].ToString();   
+    }
+
+    private void ShowPreviewPanel()
+    {
+        previewPanel.alpha = 1;
+        previewPanel.interactable = true;
+        previewPanel.blocksRaycasts = true;
+
+    }
+    private void HidePreviewPanel()
+    {
+        previewPanel.alpha = 0;
+        previewPanel.interactable = false;
+        previewPanel.blocksRaycasts = false;
+
     }
 }

@@ -16,5 +16,6 @@ MonoBehaviour:
   _itemName: Pants
   _icon: {fileID: 21300000, guid: 97ca63c5954a8464bad12dcd40673bba, type: 3}
   _prefab: {fileID: 0}
+  _itemtype: 1
   _value: 0
   _armorType: 3

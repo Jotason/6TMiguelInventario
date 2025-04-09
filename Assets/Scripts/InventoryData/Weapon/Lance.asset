@@ -16,5 +16,6 @@ MonoBehaviour:
   _itemName: Lance
   _icon: {fileID: 21300000, guid: 910738b811b3d594ab48c84e8c3dc44a, type: 3}
   _prefab: {fileID: 0}
+  _itemtype: 2
   _damage: 8
   _weaponType: 4
