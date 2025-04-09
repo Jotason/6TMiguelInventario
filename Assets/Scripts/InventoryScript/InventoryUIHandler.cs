@@ -24,8 +24,28 @@ public class InventoryUIHandler : MonoBehaviour
 
     private void Start()
     {
+        SetInventory(inventory);
         InstantiateButtons();
         ShowItems();
+    }
+
+    public void SetInventory(Inventory newInventory)
+    {
+        //ME DESUSCRIBO DE LOS EVENTOS DEL INVENTARIO ANTERIOR
+        if (inventory != null)
+        {
+            inventory.ItemAdded -= ShowItems;
+            inventory.ItemRemoved -= ShowItems;
+            inventory.ItemUpdated -= ShowItems;
+        }
+        //CAMBIO EL INVENTARIO 
+        inventory = newInventory;
+
+
+        // ME SUSCRIBO A LOS EVENTOS DEL NUEVO INVENTARIO
+        inventory.ItemAdded += ShowItems;
+        inventory.ItemRemoved += ShowItems;
+        inventory.ItemUpdated += ShowItems;
     }
 
     public void InstantiateButtons()
@@ -81,6 +101,6 @@ public class InventoryUIHandler : MonoBehaviour
     public void DeleteItem()
     {
         inventory.RemoveItem(itemSelectedId, 1);
-        ShowItems();
+        //ShowItems();
     }
 }
