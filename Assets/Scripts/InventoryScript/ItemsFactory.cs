@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemsFactory : MonoBehaviour 
+public class ItemsFactory : MonoBehaviour
 {
     ItemDataBaseSO database;
     public ItemsFactory(ItemDataBaseSO database)
@@ -14,5 +14,10 @@ public class ItemsFactory : MonoBehaviour
         ItemDataSO searchedItem = database.SearchById(id);
         GameObject instantiateItem = Instantiate(searchedItem.Prefab, parent);
         instantiateItem.transform.position = position;
+    }
+
+    public void Initialize(ItemDataBaseSO database)
+    {
+        this.database = database;
     }
 }
