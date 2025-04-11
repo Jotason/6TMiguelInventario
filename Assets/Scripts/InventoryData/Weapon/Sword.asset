@@ -15,7 +15,7 @@ MonoBehaviour:
   _id: 0
   _itemName: Sword
   _icon: {fileID: 21300000, guid: 24b508dadff7f3347a350458c2edcd4d, type: 3}
-  _prefab: {fileID: 0}
+  _prefab: {fileID: 6573162966159981288, guid: 3a249894ab6de0b49bbeaabb2d2c1acf, type: 3}
   _itemtype: 2
   _damage: 10
   _weaponType: 0

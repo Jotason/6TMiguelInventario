@@ -15,7 +15,7 @@ MonoBehaviour:
   _id: 4
   _itemName: Tibial
   _icon: {fileID: 21300000, guid: a9842c0847b39ce4abb98b3c927c82e0, type: 3}
-  _prefab: {fileID: 0}
+  _prefab: {fileID: 2972120977113280674, guid: 9cfb3480a8cf1464b97b55214c598b31, type: 3}
   _itemtype: 1
   _value: 0
   _armorType: 4

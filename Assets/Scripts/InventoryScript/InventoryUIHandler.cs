@@ -24,9 +24,17 @@ public class InventoryUIHandler : MonoBehaviour
 
     [SerializeField] CanvasGroup previewPanel;
 
+    ItemsFactory factory;   
+
 
     private void Start()
     {
+
+        factory = gameObject.AddComponent<ItemsFactory>();
+        factory.Initialize(itemDataBase);
+        factory.CreateItem(0, Vector3.zero, null);
+
+
         SetInventory(inventory);
         InstantiateButtons();
         ShowItems();
@@ -118,6 +126,12 @@ public class InventoryUIHandler : MonoBehaviour
     {
         inventory.RemoveItem(itemSelectedId, 1);
         //ShowItems();
+    }
+
+    public void DropItem() { 
+        DeleteItem();
+        factory.CreateItem(itemSelectedId, Vector3.zero, null);
+    
     }
 
     private void UpdateAmountPreview()

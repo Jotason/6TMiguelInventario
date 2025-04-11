@@ -5,10 +5,10 @@ using UnityEngine;
 public class ItemsFactory : MonoBehaviour
 {
     ItemDataBaseSO database;
-    public ItemsFactory(ItemDataBaseSO database)
-    {
-        this.database = database;
-    }
+    //public ItemsFactory(ItemDataBaseSO database)
+    //{
+    //    this.database = database;
+    //}
     public void CreateItem(int id, Vector3 position, Transform parent)
     {
         ItemDataSO searchedItem = database.SearchById(id);
