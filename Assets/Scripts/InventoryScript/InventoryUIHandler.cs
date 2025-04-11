@@ -19,12 +19,12 @@ public class InventoryUIHandler : MonoBehaviour
     [SerializeField] TextMeshProUGUI itemAmountPreviewText;
     [SerializeField] Image itemIconPreviewImage;
 
-    int itemSelectedId;
+    int itemSelectedId = -1;
     List<GameObject> instantiateButtons = new();
 
     [SerializeField] CanvasGroup previewPanel;
 
-    ItemsFactory factory;   
+    ItemsFactory factory;
 
 
     private void Start()
@@ -128,16 +128,20 @@ public class InventoryUIHandler : MonoBehaviour
         //ShowItems();
     }
 
-    public void DropItem() { 
+    public void DropItem()
+    {
         DeleteItem();
         factory.CreateItem(itemSelectedId, Vector3.zero, null);
-    
+
     }
 
     private void UpdateAmountPreview()
     {
+        if (itemSelectedId >= 0)
+        {
+            itemAmountPreviewText.text = inventory.Items[itemSelectedId].ToString();
 
-        itemAmountPreviewText.text = inventory.Items[itemSelectedId].ToString();   
+        }
     }
 
     private void ShowPreviewPanel()
