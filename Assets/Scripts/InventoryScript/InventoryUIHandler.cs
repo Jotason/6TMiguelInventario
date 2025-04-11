@@ -32,7 +32,7 @@ public class InventoryUIHandler : MonoBehaviour
 
         factory = gameObject.AddComponent<ItemsFactory>();
         factory.Initialize(itemDataBase);
-        factory.CreateItem(0, Vector3.zero, null);
+        //factory.CreateItem(0, Vector3.zero, null);
 
 
         SetInventory(inventory);

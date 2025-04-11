@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8723ae0c1d3b78f47bce28c96b30226e, type: 3}
   m_Name: Lance
   m_EditorClassIdentifier: 
-  _id: 0
+  _id: 11
   _itemName: Lance
   _icon: {fileID: 21300000, guid: 910738b811b3d594ab48c84e8c3dc44a, type: 3}
   _prefab: {fileID: 5059949957107294844, guid: 74839d32e67216a488b7fadcf7209010, type: 3}

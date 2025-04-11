@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7959fb9d63d98c447b0ec31856be0b9e, type: 3}
   m_Name: HealPoison
   m_EditorClassIdentifier: 
-  _id: 0
+  _id: 5
   _itemName: HealPoison
   _icon: {fileID: 21300000, guid: ec970eb49f887fa4b8009518367ef279, type: 3}
   _prefab: {fileID: 5921322242334659697, guid: ebe348b08c36bb54bb5345eca6e6727f, type: 3}
