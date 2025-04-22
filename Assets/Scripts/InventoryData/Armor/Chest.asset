@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 0
   _itemName: Chest
-  _icon: {fileID: 21300000, guid: 2f03f54b0073d6444ae529e8d275256d, type: 3}
+  _icon: {fileID: 21300000, guid: 32321fe5c86d1d343aac77b638b19f98, type: 3}
   _prefab: {fileID: 8600700358444904483, guid: 228454bebe8c07c4e8ea8e57dc6ff898, type: 3}
   _itemtype: 1
   _value: 20
