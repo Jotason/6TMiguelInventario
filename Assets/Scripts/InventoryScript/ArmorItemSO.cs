@@ -19,5 +19,5 @@ public class ArmorItemSO : ItemDataSO
     [SerializeField] ArmorTypeEnum _armorType;
 
     public int Value { get => _value; set => _value = value; }
-    public ArmorTypeEnum Consumabletype { get => _armorType; set => _armorType = value; }
+    public ArmorTypeEnum ArmorType { get => _armorType; set => _armorType = value; }
 }
