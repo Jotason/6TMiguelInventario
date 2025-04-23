@@ -18,4 +18,4 @@ MonoBehaviour:
   _prefab: {fileID: 7958330476558510013, guid: 334f5873dab90484d92cdb4793db90bd, type: 3}
   _itemtype: 0
   value: 10
-  _consumableType: 0
+  _consumableType: 1

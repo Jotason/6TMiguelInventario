@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] HealthSystem _health;
     [SerializeField] Inventory inventory;
+
+    public HealthSystem Health { get => _health; set => _health = value; }
+
     void Start()
     {
         

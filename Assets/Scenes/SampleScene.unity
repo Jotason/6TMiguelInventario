@@ -204,7 +204,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 156387840}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859134317}
+        m_TargetAssemblyTypeName: InventoryUIHandler, Assembly-CSharp
+        m_MethodName: UseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &156387840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1101,6 +1113,7 @@ GameObject:
   - component: {fileID: 742176333}
   - component: {fileID: 742176330}
   - component: {fileID: 742176334}
+  - component: {fileID: 742176335}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1182,6 +1195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29418fe5467b95a4083facd3ee40a4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: {fileID: 742176335}
   inventory: {fileID: 742176334}
 --- !u!212 &742176331
 SpriteRenderer:
@@ -1307,6 +1321,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e81dc0e2e157e58409d14cd0e96395e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &742176335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742176327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24aa440284a89c049a616ee703b3d226, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 75
 --- !u!1 &744557556
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,6 +2813,7 @@ MonoBehaviour:
   itemNamePreviewText: {fileID: 1420793949}
   itemAmountPreviewText: {fileID: 885524799}
   itemIconPreviewImage: {fileID: 1702334856}
+  player: {fileID: 742176330}
   previewPanel: {fileID: 2087330049}
 --- !u!1001 &1906246754
 PrefabInstance:

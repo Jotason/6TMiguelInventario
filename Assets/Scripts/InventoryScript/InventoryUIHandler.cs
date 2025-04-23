@@ -19,6 +19,8 @@ public class InventoryUIHandler : MonoBehaviour
     [SerializeField] TextMeshProUGUI itemAmountPreviewText;
     [SerializeField] Image itemIconPreviewImage;
 
+    [SerializeField] PlayerController player;
+
     int itemSelectedId = -1;
     List<GameObject> instantiateButtons = new();
 
@@ -144,6 +146,32 @@ public class InventoryUIHandler : MonoBehaviour
         }
     }
 
+
+    public void UseItem()
+    {
+        DeleteItem();
+
+        ItemDataSO item = itemDataBase.SearchById(itemSelectedId);
+        if (item.Itemtype == ItemTypeEnum.Consumable)
+        {
+            ConsumableItemSO consumable = (ConsumableItemSO) item;
+            if (consumable.Consumabletype == CounsumableItemTypeEnum.Poison) {
+                player.Health.ReceiveDamage(consumable.Value);
+            }
+            else if (consumable.Consumabletype == CounsumableItemTypeEnum.Heal) {
+                player.Health.ReceiveHeal(consumable.Value);
+            }
+            
+        }
+        else if (item.Itemtype == ItemTypeEnum.Armor) { 
+        
+        }
+        else if (item.Itemtype == ItemTypeEnum.Weapon)
+        {
+
+        }
+    }
+
     private void ShowPreviewPanel()
     {
         previewPanel.alpha = 1;
@@ -158,4 +186,6 @@ public class InventoryUIHandler : MonoBehaviour
         previewPanel.blocksRaycasts = false;
 
     }
+
+
 }

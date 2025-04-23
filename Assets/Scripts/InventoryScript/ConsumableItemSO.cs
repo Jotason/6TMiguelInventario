@@ -16,5 +16,5 @@ public class ConsumableItemSO : ItemDataSO
     [SerializeField] CounsumableItemTypeEnum _consumableType;
 
     public int Value { get => value; set => this.value = value; }
-    public CounsumableItemTypeEnum Type { get => _consumableType; set => _consumableType = value; }
+    public CounsumableItemTypeEnum Consumabletype { get => _consumableType; set => _consumableType = value; }
 }
